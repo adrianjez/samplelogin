@@ -29,11 +29,18 @@ public class UserController {
     }
 
     @PostMapping("/registration")
-    public String registration(@RequestBody User userForm) {
+    public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
+        userValidator.validate(userForm, bindingResult);
+
+        if (bindingResult.hasErrors()) {
+            return "registration";
+        }
 
         userService.save(userForm);
+
         securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
-        return "kkk";
+
+        return "redirect:/welcome";
     }
 
     @GetMapping("/login")
