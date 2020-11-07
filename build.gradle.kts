@@ -28,7 +28,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
 	implementation("org.hibernate:hibernate-validator:6.1.6.Final")
-
+	implementation("commons-net:commons-net:3.6")
 	runtimeOnly("com.h2database:h2")
 	//runtimeOnly("org.springframework.boot:spring-boot-starter-tomcat")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")

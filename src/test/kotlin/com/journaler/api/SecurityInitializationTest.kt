@@ -5,9 +5,7 @@ import com.journaler.api.security.Admin
 import com.journaler.api.security.Member
 import com.journaler.api.security.UserDTO
 import com.journaler.api.service.UserService
-import org.assertj.core.api.Assert
 import org.junit.jupiter.api.Test
-
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 
